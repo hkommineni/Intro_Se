@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+Route::get('mavoice/{slug}',['as' => 'mavoice.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getabout');
 Route::get('/', 'PagesController@getIndex');
