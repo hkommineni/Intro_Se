@@ -11,6 +11,7 @@
 |
 */
 Route::get('mavoice/{slug}',['as' => 'mavoice.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
+Route::get('mavoice',['as' => 'mavoice.index', 'uses' => 'BlogController@getIndex']);
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getabout');
 Route::get('/', 'PagesController@getIndex');
