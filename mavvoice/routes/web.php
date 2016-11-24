@@ -22,6 +22,9 @@ Route::post('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout'
  Route::get('register', ['as' => 'register', 'uses' => 'Auth\RegisterController@showRegistrationForm']);
  Route::post('register', ['as' => 'register.post', 'uses' => 'Auth\RegisterController@register']);
 
+ // Categories
+ Route::resource('categories','CategoryController', ['except'=> ['create']]);
+
 
 Route::get('mavoice/{slug}',['as' => 'mavoice.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
 Route::get('mavoice',['as' => 'mavoice.index', 'uses' => 'BlogController@getIndex']);
