@@ -25,6 +25,9 @@ Route::post('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout'
  // Categories
  Route::resource('categories','CategoryController', ['except'=> ['create']]);
 
+ // Tags
+ Route::resource('tags','TagController', ['except'=> ['create']]);
+
 
 Route::get('mavoice/{slug}',['as' => 'mavoice.single', 'uses' => 'BlogController@getSingle'])->where('slug', '[\w\d\-\_]+');
 Route::get('mavoice',['as' => 'mavoice.index', 'uses' => 'BlogController@getIndex']);
