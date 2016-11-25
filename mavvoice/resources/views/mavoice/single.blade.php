@@ -6,6 +6,7 @@
 
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
+			<img src="{{asset('images/'. $post->image)}}" height="400" width="800" />
 			<h1>{{ $post->title }}</h1>
 			<p>{!! $post->body !!}</p>
 			<hr>
@@ -24,7 +25,7 @@
 							<h4>{{ $comment->name }}</h4>
 							<p class="author-time">{{ date('F nS, Y - g:iA', strtotime($comment->created_at)) }}</p>
 						</div>
-						
+
 					</div>
 
 					<div class="comment-content">

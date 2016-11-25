@@ -6,8 +6,9 @@
 
 	<div class="row">
 		<div class="col-md-8">
+			<img src="{{asset('images/'. $post->image)}}" alt="This is a photo" height="400" width="800" />
 			<h1>{{ $post->title }}</h1>
-			<p class="lead">{!! $post->body !!}</p> 
+			<p class="lead">{!! $post->body !!}</p>
 
 			<hr>
 			<div class="tags">
@@ -40,11 +41,11 @@
 								<a href="{{ route('comments.delete', $comment->id)}}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 							</td>
 						</tr>
-						@endforeach  
+						@endforeach
 					</tbody>
 				</table>
 			</div>
-			
+
 		</div>
 		<div class="col-md-4">
 			<div class="well">
@@ -74,7 +75,7 @@
 						{!! Html::linkRoute('posts.edit', 'Edit', array($post->id),array('class' => 'btn btn-primary btn-block')) !!}
 					</div>
 					<div class="col-sm-6">
-						{!! Form::open(['route' => ['posts.destroy', $post->id], 'method'=> 'DELETE']) !!} 
+						{!! Form::open(['route' => ['posts.destroy', $post->id], 'method'=> 'DELETE']) !!}
 
 						{!! Form::submit('Delete',['class'=>'btn btn-danger btn-block'])!!}
 
@@ -93,6 +94,6 @@
 		</div>
 	</div>
 
-	
+
 
 @endsection
