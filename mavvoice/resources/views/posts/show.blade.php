@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-md-8">
 			<h1>{{ $post->title }}</h1>
-			<p class="lead">{{ $post->body }}</p> 
+			<p class="lead">{!! $post->body !!}</p> 
 
 			<hr>
 			<div class="tags">
@@ -40,7 +40,7 @@
 								<a href="{{ route('comments.delete', $comment->id)}}" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 							</td>
 						</tr>
-						@endforeach
+						@endforeach  
 					</tbody>
 				</table>
 			</div>
